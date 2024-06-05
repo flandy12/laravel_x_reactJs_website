@@ -1,8 +1,5 @@
 import React from "react";
 
-
-
-
 function Navbar() {
 
     const subnav = [
@@ -61,7 +58,7 @@ function Navbar() {
                         <ul className="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
                             {
                                 subnav.map((value,key) => (
-                                    <li className={`nav-item ${url === value.link ? 'active' : ''}`} key={key}>
+                                    <li className={`nav-item active${url === value.link ? 'active' : ''}`} key={key}>
                                         <a className="nav-link" href={value.link}>
                                             {value.name}
                                         </a>

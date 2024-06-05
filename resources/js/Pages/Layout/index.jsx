@@ -1,15 +1,16 @@
 import React from "react";
-import Navbar from "../Compoment/navbar"
 import Footer from "../Compoment/footer";
+import Navbar from "../Compoment/navbar";
+import '../../bootstrap';
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
     return (
         <>
             <Navbar/>
             {children}
-            <Footer/>
+            <Footer />
         </>
-    )
-} 
+    );
+};
 
 export default Layout;
