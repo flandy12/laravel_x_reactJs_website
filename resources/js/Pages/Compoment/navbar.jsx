@@ -1,32 +1,31 @@
 import React from "react";
 
 function Navbar() {
-
     const subnav = [
         {
-        name: "Home",
-        link: '/',
+            name: "Home",
+            link: "/",
         },
         {
-        name: "Shop",
-        link: '/shop',
+            name: "Shop",
+            link: "/shop",
         },
         {
-        name : 'About us',
-        link : '/about-us'
+            name: "About us",
+            link: "/about-us",
         },
         {
-        name : 'Services',
-        link : '/services'
+            name: "Services",
+            link: "/services",
         },
         {
-        name : 'Blog',
-        link : '/blog'
+            name: "Blog",
+            link: "/blog",
         },
         {
-        name : 'Contact Us',
-        link : '/contact'
-        }
+            name: "Contact Us",
+            link: "/contact",
+        },
     ];
 
     const url = window.location.href;
@@ -56,17 +55,19 @@ function Navbar() {
 
                     <div className="collapse navbar-collapse" id="navbarsFurni">
                         <ul className="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-                            {
-                                subnav.map((value,key) => (
-                                    <li className={`nav-item active${url === value.link ? 'active' : ''}`} key={key}>
-                                        <a className="nav-link" href={value.link}>
-                                            {value.name}
-                                        </a>
-                                    </li>
-                                ))
-                            }
+                            {subnav.map((value, key) => (
+                                <li
+                                    className={`nav-item ${
+                                        url === value.link ? "active" : ""
+                                    }`}
+                                    key={key}
+                                >
+                                    <a className="nav-link" href={value.link}>
+                                        {value.name}
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
-
 
                         <ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
                             <li>
